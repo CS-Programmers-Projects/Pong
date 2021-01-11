@@ -7,7 +7,7 @@ import pygame
 class GameManager():
     def __init__(self):
         # self.ball = Ball(x,y,widt,height,speed)
-        # self.player_paddle = Paddle(x,y,widt,height)
+        # self.player_paddle = Paddle(x,widt,height,speed)
         # self.bot_paddle = AutoPaddle(x,y,widt,height, self.ball, speed)
         # self.scoreboard =  ScoreBoard()
         pass
