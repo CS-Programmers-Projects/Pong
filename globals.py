@@ -5,6 +5,7 @@ import pygame
 
 from enum import Enum
 class Color(Enum):
+    BLACK = (0,0,0)
     BLUE = (0, 0, 128)
     GREEN = (0, 200, 0)
     WHITE = (255, 255, 255)
