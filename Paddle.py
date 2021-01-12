@@ -13,8 +13,8 @@ class Paddle():
         pygame.draw.rect(main_window.window,  Color.WHITE.value, (self.x, self.y, self.width, self.height))
 
     def move(self):
-        keys= pygame.key.get_pressed()
-        if keys[pygame.K_UP]:
-            self.y += self.speed
-        if keys[pygame.K_DOWN]:
+        keys = pygame.key.get_pressed()
+        if keys[pygame.K_UP] and self.y > self.speed:
             self.y -= self.speed
+        if keys[pygame.K_DOWN] and self.y < main_window.height - self.height - self.speed:
+            self.y += self.speed
