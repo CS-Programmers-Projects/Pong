@@ -1,7 +1,7 @@
 # from Ball import Ball
 from Paddle import Paddle
 # from AutoPaddle import AutoPaddle
-# from ScoreBoard import ScoreBoard
+from ScoreBoard import ScoreBoard
 from globals import *
 import pygame
 from AutoPaddle import AutoPaddle
@@ -12,10 +12,12 @@ class GameManager():
         # self.ball = Ball(x,y,width,height,speed)
         self.player_paddle = Paddle(20, 10, 50, 5)
         # self.bot_paddle = AutoPaddle(x,y,width,height, self.ball, speed)
-        self.bot_paddle = AutoPaddle(370, 10, 50, 0, 5)
 
-        # self.scoreboard =  ScoreBoard()
-        pass
+        
+        self.bot_paddle = AutoPaddle(370, 10, 50, 0, 5)
+        self.scoreboard =  ScoreBoard()
+
+
 
     def draw(self):
         main_window.window.fill(Color.BLACK.value)
@@ -27,7 +29,7 @@ class GameManager():
                          (int(main_window.width / 2), main_window.height), int(10 / 4))
 
         # self.ball.draw()
-        # self.scoreboard.draw()
+        self.scoreboard.draw()
         self.player_paddle.draw()
         self.bot_paddle.draw()
 
