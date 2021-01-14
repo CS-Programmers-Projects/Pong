@@ -4,9 +4,10 @@ import pygame
 
 class AutoPaddle(Paddle):
 
-    def __init__(self, x, w, h, ball, speed):
+    def __init__(self, x, w, h, y, ball, speed):
         super().__init__(x, w, h, speed)
         self.ball = ball
+        self.y = y
 
     def move(self):
 
