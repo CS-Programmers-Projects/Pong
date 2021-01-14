@@ -11,7 +11,7 @@ class ScoreBoard():
         self.font = pygame.font.Font('freesansbold.ttf', 20)
 
     def draw(self):
-        text = self.font.render("player: " + str(self.userScore) + " computer: " + str(self.computerScore) ,
+        text = self.font.render("player: " + str(self.userScore) + "               computer: " + str(self.computerScore) ,
                                 True, (255, 255, 255))
 
         textRect = text.get_rect()
