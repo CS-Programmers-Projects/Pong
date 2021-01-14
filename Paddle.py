@@ -1,7 +1,7 @@
 from globals import *
 import pygame
 
-class Paddle():
+class Paddle(pygame.sprite.Sprite):
     def __init__(self, x, w, h, speed):
         self.x = x
         self.y = main_window.height/2 - h/2
