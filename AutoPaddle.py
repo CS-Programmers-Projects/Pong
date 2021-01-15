@@ -4,14 +4,12 @@ import pygame
 
 class AutoPaddle(Paddle):
 
-    def __init__(self, x, w, h, y, ball, speed):
+    def __init__(self, x, w, h,  ball, speed):
         super().__init__(x, w, h, speed)
         self.ball = ball
-        self.y = y
 
     def move(self):
-
-        if self.ball.y > self.rect.center:
-            self.y += self.speed
-        if self.ball.y < self.rect.center:
-            self.y += self.speed
+        if self.ball.rect.y > self.rect.center[1]:
+            self.rect.y += self.speed
+        if self.ball.rect.y < self.rect.center[1]:
+            self.rect.y += self.speed
