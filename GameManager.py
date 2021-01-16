@@ -7,7 +7,13 @@ from AutoPaddle import AutoPaddle
 
 
 class GameManager():
+    """
+    GameManager class to handle game logic.
+    """
     def __init__(self):
+        """
+        initializing the objects needed in this class, and objects of the game.
+        """
         ball_x = int(main_window.width / 2 - 5)
         ball_y = int(main_window.height / 2 - 5)
         self.ball = Ball(ball_x, ball_y, 10,
@@ -18,6 +24,11 @@ class GameManager():
         self.scoreboard = ScoreBoard()
 
     def draw(self):
+        """
+        draws each object on the game window
+        :return: None
+        :rtype: None
+        """
         main_window.window.fill(Color.BLACK.value)
         pygame.draw.rect(main_window.window, Color.WHITE.value,
                          ((0, 0), (main_window.width, main_window.height)), 20)
@@ -28,6 +39,11 @@ class GameManager():
         self.bot_paddle.draw()
 
     def update(self):
+        """
+        updates the states of each object on the game window
+        :return: None
+        :rtype: None
+        """
         self.ball.move()
         self.bot_paddle.move()
         self.player_paddle.move()

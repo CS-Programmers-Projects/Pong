@@ -6,8 +6,12 @@ fps_clock = pygame.time.Clock()
 fps = 40  # Number of frames per second
 
 
-# Main function
 def main():
+    """
+
+    :return: None
+    :rtype: None
+    """
     pygame.init()
 
     game = GameManager()
