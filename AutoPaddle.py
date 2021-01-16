@@ -27,6 +27,7 @@ class AutoPaddle(Paddle):
         incharge of the movement of our AutoPaddle , according to the ball location
         :return: nothing
         """
+
         if self.ball.rect.y > self.rect.y and self.rect.y + self.height + self.speed < main_window.height:
             self.rect.y += self.speed
         if self.ball.rect.y < self.rect.y:
