@@ -56,7 +56,8 @@ class GameManager():
         elif self.ball.pass_player():
             print("Passed player")
             self.scoreboard.update_computer_score()
-            # self.ball.reset_pos()
+            self.ball.reset_pos()
         elif self.ball.pass_computer():
             print("passed bot")
             self.scoreboard.update_player_score()
+            self.ball.reset_pos()

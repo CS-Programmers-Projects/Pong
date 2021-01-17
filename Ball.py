@@ -64,9 +64,9 @@ class Ball(sprite.Sprite):
         else:
             self.dir_y *= -1
 
-    # def reset_pos(self):
-    #     self.rect.x = self.__start_x
-    #     self.rect.y = self.__start_y
-    #
-    #     self.dir_x = 6
-    #     self.dir_y = 6
+    def reset_pos(self):
+        self.rect.x = self.__start_x
+        self.rect.y = self.__start_y
+
+        self.dir_x = -1
+        self.dir_y = -1
